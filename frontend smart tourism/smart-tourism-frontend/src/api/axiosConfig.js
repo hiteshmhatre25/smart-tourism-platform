@@ -2,7 +2,7 @@ import axios from "axios";
 import { logout } from "./authApi";
 
 const instance = axios.create({
-  baseURL: "http://localhost:7778",
+  baseURL: import.meta.env.VITE_API_URL,
 });
 
 instance.interceptors.request.use((config) => {
